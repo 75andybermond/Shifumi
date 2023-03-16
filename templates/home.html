@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <form action="/play" method="POST">
+      <label for="rock">Rock</label>
+      <input type="radio" id="rock" name="choice" value="rock">
+      <br>
+      <label for="paper">Paper</label>
+      <input type="radio" id="paper" name="choice" value="paper">
+      <br>
+      <label for="scissors">Scissors</label>
+      <input type="radio" id="scissors" name="choice" value="scissors">
+      <br>
+      <input type="submit" value="Play">
+    </form>
+  </body>
+</html>

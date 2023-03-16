@@ -1,0 +1,69 @@
+/* Add styles for the body element */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("C:\Users\utilisateur\Desktop\IA\learningCode\Projects_Simplon\Shifumi\Shifumi\rock-paper-scissors-neon-icons.jpg");
+  background-size: cover;
+}
+
+/* Add styles for the body element */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Add styles for the h1 element */
+  h1 {
+    background-color: #0095dd;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Add styles for the form element */
+  form {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add styles for the label and input elements */
+  label, input[type="radio"] {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  /* Add styles for the submit button */
+  input[type="submit"] {
+    background-color: #0095dd;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0080c6;
+  }
+  
+  /* Add styles for the result message */
+  p {
+    font-size: 24px;
+    margin: 20px;
+    text-align: center;
+  }
+  

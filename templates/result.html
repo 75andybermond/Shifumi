@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+  </body>
+
+</html>
+  <head>
+    <title>Result</title>
+  </head>
+  <body>
+    <h1>Result</h1>
+    <p>{{ result_message }}</p>
+    <p>Your choice: {{ user_choice }}</p>
+    <p>Computer's choice: {{ computer_choice }}</p>
+    <p>Your score: {{ user_score }}</p>
+    <p>Computer's score: {{ computer_score }}</p>
+    <form action="/" method="get">
+      <button type="submit">Play again</button>
+    </form>
+  </body>
+</html>
+
+
+
+
+
