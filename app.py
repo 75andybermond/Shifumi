@@ -15,7 +15,6 @@ def home():
         session['computer_score'] = 0
     
     return render_template('home.html')
- 
 
 @app.route('/play', methods=['POST'])
 def play():
@@ -42,9 +41,6 @@ def play():
         # Increase the computer's score by 1 if the computer wins
         session['computer_score'] += 1
 
-    # Save the result to a file
-    with open('result.txt', 'w') as result_file:
-        result_file.write(result_message)
     # Render the result page with the result message, user's choice, and computer's choice
     return render_template('result.html',
                            result_message=result_message,
@@ -52,13 +48,6 @@ def play():
                            computer_choice=computer_choice,
                            user_score=session['user_score'],
                            computer_score=session['computer_score'])
-@app.route('/result')
-def display_result():
-    # Read the saved result from the file
-    with open('result.txt', 'r') as result_file:
-        result_message = result_file.read()
-    # Render a template with the saved result
-    return render_template('display_result.html', result_message=result_message)
 
 @app.route('/reset', methods=['POST'])
 def reset_scores():

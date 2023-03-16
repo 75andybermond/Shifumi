@@ -3,20 +3,45 @@
   <head>
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        // Listen for clicks on the rock image
+        $('#rock').click(function() {
+          play('rock');
+        });
+        
+        // Listen for clicks on the paper image
+        $('#paper').click(function() {
+          play('paper');
+        });
+        
+        // Listen for clicks on the scissors image
+        $('#scissors').click(function() {
+          play('scissors');
+        });
+        
+        // Send a request to the server with the user's choice and display the result
+        function play(choice) {
+          $.ajax({
+            url: '/play',
+            type: 'POST',
+            data: {'choice': choice},
+            success: function(response) {
+              $('#result').html(response);
+            },
+            error: function(error) {
+              console.log(error);
+            }
+          });
+        }
+      });
+    </script>
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <form action="/play" method="POST">
-      <label for="rock">Rock</label>
-      <input type="radio" id="rock" name="choice" value="rock">
-      <br>
-      <label for="paper">Paper</label>
-      <input type="radio" id="paper" name="choice" value="paper">
-      <br>
-      <label for="scissors">Scissors</label>
-      <input type="radio" id="scissors" name="choice" value="scissors">
-      <br>
-      <input type="submit" value="Play">
-    </form>
+    <img id="rock" src="{{ url_for('static', filename='rock.png') }}" alt="Rock">
+    <img id="paper" src="{{ url_for('static', filename='paper.png') }}" alt="Paper">
+    <img id="scissors" src="{{ url_for('static', filename='scissors.png') }}" alt="Scissors">
+    <div id="result"></div>
   </body>
 </html>
