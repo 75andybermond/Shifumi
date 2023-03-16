@@ -20,6 +20,8 @@ def home():
 @app.route('/play', methods=['POST'])
 def play():
     # Get the user's choice from the form data
+    if 'choice' not in request.form:
+        return home()
     user_choice = request.form['choice']
     
     # Generate a random move for the computer
@@ -43,7 +45,6 @@ def play():
     # Save the result to a file
     with open('result.txt', 'w') as result_file:
         result_file.write(result_message)
-        
     # Render the result page with the result message, user's choice, and computer's choice
     return render_template('result.html',
                            result_message=result_message,
