@@ -59,5 +59,15 @@ def display_result():
     # Render a template with the saved result
     return render_template('display_result.html', result_message=result_message)
 
+@app.route('/reset', methods=['POST'])
+def reset_scores():
+    # Clear the session variables for the scores
+    session['user_score'] = 0
+    session['computer_score'] = 0
+    
+    # Redirect back to the home page
+    return home()
+
+
 if __name__ == '__main__':
     app.run(debug=True)

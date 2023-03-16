@@ -1,22 +1,17 @@
-/* Add styles for the body element */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url("C:\Users\utilisateur\Desktop\IA\learningCode\Projects_Simplon\Shifumi\Shifumi\rock-paper-scissors-neon-icons.jpg");
-  background-size: cover;
-}
 
-/* Add styles for the body element */
 body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/bd/Pierre_ciseaux_feuille_l%C3%A9zard_spock.svg");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-position: center;
   }
+
   
   /* Add styles for the h1 element */
   h1 {
@@ -29,7 +24,7 @@ body {
   
   /* Add styles for the form element */
   form {
-    background-color: #f2f2f2;
+    background-color: #9f4274;
     border-radius: 5px;
     margin: 20px;
     padding: 20px;
@@ -57,13 +52,32 @@ body {
   }
   
   input[type="submit"]:hover {
-    background-color: #0080c6;
+    background-color: #c60000;
   }
   
   /* Add styles for the result message */
   p {
+    background-color: #9f4274;
     font-size: 24px;
-    margin: 20px;
+    margin: 30px;
     text-align: center;
+  }
+  
+  .reset-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .reset-button:hover {
+    background-color: #3e8e41;
   }
   
