@@ -1,2 +1,6 @@
 # Shifumi
 Shifumi game
+
+
+To use cv2 on codespace, install the following packages:
+- sudo apt-get install libgl1 
